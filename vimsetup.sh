@@ -34,11 +34,13 @@ ln -sf $VIMDIR/.vim ~/.vim
 
 #Fetch and install MacVim
 echo "*** Fetching MacVim ***"
-DIR=~/Downloads
-curl -L https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz --output $DIR/MacVim.tbz
-tar -xf $DIR/MacVim.tbz -C $DIR/
-mv $DIR/MacVim-snapshot-73/MacVim.app ~/../../Applications
-rm $DIR/MacVim.tbz
-rm -rf $DIR/MacVim-snapshot-73
+brew install macvim --with-features=huge --override-system-vim --HEAD
+brew linkapps macvim
+#DIR=~/Downloads
+#curl -L https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz --output $DIR/MacVim.tbz
+#tar -xf $DIR/MacVim.tbz -C $DIR/
+#mv $DIR/MacVim-snapshot-73/MacVim.app ~/../../Applications
+#rm $DIR/MacVim.tbz
+#rm -rf $DIR/MacVim-snapshot-73
 
 echo "*** Done! ***"
