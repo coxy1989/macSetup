@@ -24,6 +24,15 @@ echo "*** Cloning .NERDTree ***"
 rm -rf $VIMDIR/.vim/bundle/nerdtree
 git clone https://github.com/scrooloose/nerdtree.git $VIMDIR/.vim/bundle/nerdtree
 
+# --> YOUCOMPLETEME PLUGIN
+echo "*** Cloning .YOUCOMPLETEME ***"
+rm -rf $VIMDIR/.vim/bundle/YouCompleteMe
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+./install.sh --clang-completer
+cd ..
+ 
 # END OF PATHOGEN PLUGINS #
 
 # Symbolic link .vimrc .xvimrc .vim to ~/ (overwrite existing paths)
