@@ -33,6 +33,11 @@ git submodule update --init --recursive
 ./install.sh --clang-completer
 cd ..
  
+ # --> CTRL-P PLUGIN
+ echo "*** Cloning .CTRL-ME"
+ rm -rf $VIMDIR/.vim/bundle/ctrlp.vim
+ git clone https://github.com/ctrlpvim/ctrlp.vim.git
+ 
 # END OF PATHOGEN PLUGINS #
 
 # Symbolic link .vimrc .xvimrc .vim to ~/ (overwrite existing paths)
