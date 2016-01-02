@@ -38,6 +38,11 @@ cd ..
  rm -rf $VIMDIR/.vim/bundle/ctrlp.vim
  git clone https://github.com/ctrlpvim/ctrlp.vim.git
  
+ # --> VIM-CPP-ENCHANCED PLUGIN
+ echo "*** Cloning .VIM-CPP-ENHANCED"
+ rm -rf $VIMDIR/.vim/bundle/vim-cpp-enhanced-highlight
+ git clone https://github.com/octol/vim-cpp-enhanced-highlight.git
+ 
 # END OF PATHOGEN PLUGINS #
 
 # Symbolic link .vimrc .xvimrc .vim to ~/ (overwrite existing paths)
